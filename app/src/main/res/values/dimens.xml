@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="cpv_size">40dp</dimen>
+    <dimen name="title_size">18dp</dimen>
+    <dimen name="cell_img_size">100dp</dimen>
+    <dimen name="show_img_size">200dp</dimen>
+</resources>

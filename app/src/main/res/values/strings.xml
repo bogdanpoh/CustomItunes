@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">CustomItunes</string>
+    <string name="audiobooks">Audiobooks</string>
+    <string name="movies">Movies</string>
+    <string name="podcasts">Podcasts</string>
+    <string name="favorites">Favorites</string>
+    <string name="empty_list">List empty :(</string>
+    <string name="txt_book_name">Book name</string>
+    <string name="txt_artist_name">Artist name</string>
+    <string name="provieder_error_connect">Error connect to network</string>
+    <string name="show_label_author">Author:</string>
+    <string name="show_label_genre">Genge:</string>
+    <string name="show_genre">Genre</string>
+    <string name="show_artist_name">Artist name</string>
+    <string name="show_label_price">Price:</string>
+    <string name="show_description">Description</string>
+    <string name="free_price">Free</string>
+</resources>

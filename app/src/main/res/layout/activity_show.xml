@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_material_light">
+
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/view_background"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:context=".activities.ShowActivity">
+
+        <include
+            android:id="@+id/show_toolbar"
+            layout="@layout/toolbar" />
+
+        <TextView
+            android:id="@+id/show_txt_collection_name"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="22dp"
+            android:layout_marginTop="20dp"
+            android:paddingEnd="10dp"
+            android:text="Collection name"
+            android:textColor="@color/black"
+            android:textSize="14dp"
+            app:layout_constraintEnd_toStartOf="@id/show_txt_release_date"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/show_toolbar" />
+
+        <TextView
+            android:id="@+id/show_txt_release_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="7dp"
+            android:text="Release Date"
+            android:textColor="@color/grey"
+            android:textSize="12sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/show_txt_collection_name" />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/show_img_cardview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="26dp"
+            app:cardCornerRadius="7dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/show_txt_collection_name">
+
+            <ImageView
+                android:id="@+id/show_img_art_work"
+                android:layout_width="@dimen/show_img_size"
+                android:layout_height="@dimen/show_img_size" />
+
+        </androidx.cardview.widget.CardView>
+
+        <LinearLayout
+            android:id="@+id/show_hr_after_img"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="28dp"
+            app:layout_constraintTop_toBottomOf="@id/show_img_cardview">
+
+            <include layout="@layout/hr" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/show_txt_artist_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="22dp"
+            android:layout_marginTop="20dp"
+            android:text="@string/show_label_author"
+            android:textColor="@color/black"
+            android:textSize="14sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/show_hr_after_img" />
+
+        <TextView
+            android:id="@+id/show_txt_artist_name"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="50dp"
+            android:paddingEnd="5dp"
+            android:text="@string/show_artist_name"
+            android:textColor="@color/colorAccent"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/show_txt_artist_label"
+            app:layout_constraintTop_toTopOf="@id/show_txt_artist_label" />
+
+        <TextView
+            android:id="@+id/show_txt_genre_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="22dp"
+            android:layout_marginTop="25dp"
+            android:text="@string/show_label_genre"
+            android:textColor="@color/black"
+            android:textSize="14sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/show_txt_artist_label" />
+
+        <TextView
+            android:id="@+id/show_txt_genre"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:paddingEnd="5dp"
+            android:text="@string/show_genre"
+            android:textColor="@color/colorAccent"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@id/show_txt_artist_name"
+            app:layout_constraintTop_toTopOf="@id/show_txt_genre_label" />
+
+        <TextView
+            android:id="@+id/show_txt_price_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="22dp"
+            android:layout_marginTop="25dp"
+            android:text="@string/show_label_price"
+            android:textColor="@color/black"
+            android:textSize="14sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/show_txt_genre_label" />
+
+        <TextView
+            android:id="@+id/show_txt_collection_price"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Price"
+            android:textColor="@color/colorAccent"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@id/show_txt_genre"
+            app:layout_constraintTop_toTopOf="@id/show_txt_price_label" />
+
+        <LinearLayout
+            android:id="@+id/show_hr_after_labels"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            app:layout_constraintTop_toBottomOf="@id/show_txt_price_label">
+
+            <include layout="@layout/hr" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/show_txt_description"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/show_description"
+            android:textColor="@color/black"
+            android:layout_marginTop="16dp"
+            android:paddingStart="20dp"
+            android:paddingEnd="20dp"
+            android:paddingBottom="5dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/show_hr_after_labels" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
