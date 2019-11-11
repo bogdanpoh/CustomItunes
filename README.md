@@ -16,3 +16,8 @@ Link for a download apk - https://drive.google.com/file/d/12dHfXxBLJ23GQAeqsgyMl
 
 # Cool animation, swipe right to close view
 ![Podcasts from Itunes](https://i.ibb.co/zFLTLMw/photo-2019-11-11-02-49-33.jpg)
+
+# Designer
+Klochko Nastia
+Mail: emanon2015@gmail.com
+Behance: https://www.behance.net/fampucha
