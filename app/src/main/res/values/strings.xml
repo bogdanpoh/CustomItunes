@@ -15,4 +15,5 @@
     <string name="show_label_price">Price:</string>
     <string name="show_description">Description</string>
     <string name="free_price">Free</string>
+    <string name="about_title">About</string>
 </resources>

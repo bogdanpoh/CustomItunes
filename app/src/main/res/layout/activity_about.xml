@@ -1,0 +1,252 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_material_light"
+    tools:context=".activities.AboutActivity">
+
+    <include
+        android:id="@+id/about_toolbar"
+        layout="@layout/toolbar" />
+
+    <TextView
+        android:id="@+id/about_position_des_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="Designer"
+        android:textColor="@color/black"
+        android:textSize="14dp"
+        app:layout_constraintStart_toStartOf="@id/about_position_dev_label"
+        app:layout_constraintTop_toBottomOf="@id/hr_after_developer" />
+
+    <include
+        android:id="@+id/hr_after_designer"
+        layout="@layout/hr"
+        android:layout_width="wrap_content"
+        android:layout_height="2dp"
+        android:layout_marginTop="20dp"
+        app:layout_constraintTop_toBottomOf="@id/about_position_des_label" />
+
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/about_img_designer"
+        android:layout_width="@dimen/avatar_size"
+        android:layout_height="@dimen/avatar_size"
+        android:layout_marginTop="12dp"
+        android:src="@mipmap/avatar2"
+        app:layout_constraintStart_toStartOf="@id/about_position_des_label"
+        app:layout_constraintTop_toBottomOf="@id/hr_after_designer" />
+
+    <TextView
+        android:id="@+id/about_email_designer_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="Email:"
+        android:textColor="@color/black"
+        android:textSize="14dp"
+        app:layout_constrainedWidth="true"
+        app:layout_constraintStart_toStartOf="@id/about_img_designer"
+        app:layout_constraintTop_toBottomOf="@id/about_img_designer" />
+
+    <TextView
+        android:id="@+id/about_instagram_designer_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="Instagram:"
+        android:textColor="@color/black"
+        android:textSize="14dp"
+        app:layout_constrainedWidth="true"
+        app:layout_constraintStart_toStartOf="@id/about_img_designer"
+        app:layout_constraintTop_toBottomOf="@id/about_email_designer_label" />
+
+    <TextView
+        android:id="@+id/about_behance_designer_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="Behance:"
+        android:textColor="@color/black"
+        android:textSize="14dp"
+        app:layout_constrainedWidth="true"
+        app:layout_constraintStart_toStartOf="@id/about_img_designer"
+        app:layout_constraintTop_toBottomOf="@id/about_instagram_designer_label" />
+
+    <TextView
+        android:id="@+id/about_name_designer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="50dp"
+        android:text="Klochko Nastia"
+        android:textColor="@color/black"
+        android:textSize="14dp"
+        app:layout_constraintBottom_toBottomOf="@id/about_img_designer"
+        app:layout_constraintStart_toEndOf="@id/about_img_designer"
+        app:layout_constraintTop_toTopOf="@id/about_img_designer" />
+
+    <TextView
+        android:id="@+id/about_email_designer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="50dp"
+        android:text="emanon2015@gmail.com"
+        android:textColor="@color/colorAccent"
+        android:textSize="14dp"
+        app:layout_constrainedWidth="true"
+        app:layout_constraintBottom_toBottomOf="@id/about_email_designer_label"
+        app:layout_constraintStart_toEndOf="@id/about_email_designer_label"
+        app:layout_constraintTop_toTopOf="@id/about_email_designer_label" />
+
+    <TextView
+        android:id="@+id/about_instagram_designer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="\@your_death_404"
+        android:textColor="@color/colorAccent"
+        android:textSize="14dp"
+        app:layout_constrainedWidth="true"
+        app:layout_constraintBottom_toBottomOf="@id/about_instagram_designer_label"
+        app:layout_constraintStart_toStartOf="@id/about_email_designer"
+        app:layout_constraintTop_toTopOf="@id/about_instagram_designer_label" />
+
+    <TextView
+        android:id="@+id/about_behance_developer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="https://www.behance.net/fampucha"
+        android:textColor="@color/colorAccent"
+        android:textSize="14dp"
+        app:layout_constrainedWidth="true"
+        app:layout_constraintBottom_toBottomOf="@id/about_behance_designer_label"
+        app:layout_constraintStart_toStartOf="@id/about_email_designer"
+        app:layout_constraintTop_toTopOf="@id/about_behance_designer_label" />
+
+    <include
+        android:id="@+id/hr_after_developer"
+        layout="@layout/hr"
+        android:layout_width="wrap_content"
+        android:layout_height="2dp"
+        android:layout_marginTop="12dp"
+        app:layout_constraintTop_toBottomOf="@id/about_github_label" />
+
+    <TextView
+        android:id="@+id/about_position_dev_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:text="Developer"
+        android:textColor="@color/black"
+        android:textSize="14dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/about_toolbar" />
+
+    <include
+        android:id="@+id/hr_after_position"
+        layout="@layout/hr"
+        android:layout_width="wrap_content"
+        android:layout_height="2dp"
+        android:layout_marginTop="20dp"
+        app:layout_constraintTop_toBottomOf="@id/about_position_dev_label" />
+
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/about_img_developer"
+        android:layout_width="@dimen/avatar_size"
+        android:layout_height="@dimen/avatar_size"
+        android:layout_marginTop="12dp"
+        android:src="@mipmap/avatar"
+        app:layout_constraintStart_toStartOf="@id/about_position_dev_label"
+        app:layout_constraintTop_toBottomOf="@id/hr_after_position" />
+
+    <TextView
+        android:id="@+id/about_email_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="Email:"
+        android:textColor="@color/black"
+        android:textSize="14dp"
+        app:layout_constrainedWidth="true"
+        app:layout_constraintStart_toStartOf="@id/about_img_developer"
+        app:layout_constraintTop_toBottomOf="@id/about_img_developer" />
+
+    <TextView
+        android:id="@+id/about_instagram_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="Instagram:"
+        android:textColor="@color/black"
+        android:textSize="14dp"
+        app:layout_constrainedWidth="true"
+        app:layout_constraintStart_toStartOf="@id/about_img_developer"
+        app:layout_constraintTop_toBottomOf="@id/about_email_label" />
+
+    <TextView
+        android:id="@+id/about_github_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="GitHub:"
+        android:textColor="@color/black"
+        android:textSize="14dp"
+        app:layout_constrainedWidth="true"
+        app:layout_constraintStart_toStartOf="@id/about_img_developer"
+        app:layout_constraintTop_toBottomOf="@id/about_instagram_label" />
+
+    <TextView
+        android:id="@+id/about_name_developer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="50dp"
+        android:text="Bohdan Pokhidnia"
+        android:textColor="@color/black"
+        android:textSize="14dp"
+        app:layout_constraintBottom_toBottomOf="@id/about_img_developer"
+        app:layout_constraintStart_toEndOf="@id/about_img_developer"
+        app:layout_constraintTop_toTopOf="@id/about_img_developer" />
+
+    <TextView
+        android:id="@+id/about_email_developer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="50dp"
+        android:text="bogdan20205@gmail.com"
+        android:textColor="@color/colorAccent"
+        android:textSize="14dp"
+        app:layout_constrainedWidth="true"
+        app:layout_constraintBottom_toBottomOf="@id/about_email_label"
+        app:layout_constraintStart_toEndOf="@id/about_email_label"
+        app:layout_constraintTop_toTopOf="@id/about_email_label" />
+
+    <TextView
+        android:id="@+id/about_instagram_developer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="\@bogdan.poh"
+        android:textColor="@color/colorAccent"
+        android:textSize="14dp"
+        app:layout_constrainedWidth="true"
+        app:layout_constraintBottom_toBottomOf="@id/about_instagram_label"
+        app:layout_constraintStart_toStartOf="@id/about_email_developer"
+        app:layout_constraintTop_toTopOf="@id/about_instagram_label" />
+
+    <TextView
+        android:id="@+id/about_github_developer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="https://github.com/bogdanpoh"
+        android:textColor="@color/colorAccent"
+        android:textSize="14dp"
+        app:layout_constrainedWidth="true"
+        app:layout_constraintBottom_toBottomOf="@id/about_github_label"
+        app:layout_constraintStart_toStartOf="@id/about_email_developer"
+        app:layout_constraintTop_toTopOf="@id/about_github_label" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

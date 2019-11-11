@@ -39,6 +39,7 @@ dependencies {
     implementation 'com.github.hajiyevelnur92:intentanimation:1.0'
     implementation 'com.r0adkll:slidableactivity:2.1.0'
     implementation 'org.jsoup:jsoup:1.12.1'
+    implementation 'de.hdodenhof:circleimageview:3.0.1'
 
     //Room
     implementation "androidx.room:room-runtime:$room_version"

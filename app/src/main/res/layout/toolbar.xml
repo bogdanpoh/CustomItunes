@@ -30,19 +30,20 @@
 
             <ImageView
                 android:id="@+id/toolbar_back"
-                android:layout_width="24dp"
-                android:layout_height="24dp"
+                android:layout_width="@dimen/toolbar_icon_size"
+                android:layout_height="@dimen/toolbar_icon_size"
                 android:layout_marginStart="20dp"
                 android:src="@drawable/ic_back"
                 android:visibility="gone"
+                android:background="?android:attr/selectableItemBackground"
                 app:layout_constraintBottom_toBottomOf="@id/toolbar_title"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="@id/toolbar_title" />
 
             <ImageView
                 android:id="@+id/toolbar_save"
-                android:layout_width="24dp"
-                android:layout_height="24dp"
+                android:layout_width="@dimen/toolbar_icon_size"
+                android:layout_height="@dimen/toolbar_icon_size"
                 android:layout_marginEnd="20dp"
                 android:src="@drawable/ic_save"
                 android:visibility="gone"
@@ -50,10 +51,22 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toTopOf="@id/toolbar_title" />
 
+            <ImageView
+                android:id="@+id/toolbar_info"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:layout_marginEnd="20dp"
+                android:src="@drawable/ic_info"
+                android:layout_width="24dp"
+                android:layout_height="24dp"/>
+
         </androidx.constraintlayout.widget.ConstraintLayout>
 
     </androidx.appcompat.widget.Toolbar>
 
-    <include layout="@layout/hr" />
+    <include
+        android:id="@+id/toolbar_hr"
+        layout="@layout/hr" />
 
 </LinearLayout>

@@ -3,6 +3,7 @@ package com.bogdanpoh.customitunes.activities
 
 import android.content.Intent
 import android.os.Bundle
+import android.util.Log
 import android.view.View
 import android.widget.ImageView
 import android.widget.TextView
@@ -18,6 +19,7 @@ import com.bogdanpoh.customitunes.views.ShowView
 import com.r0adkll.slidr.Slidr
 import com.squareup.picasso.Picasso
 import kotlinx.android.synthetic.main.activity_show.*
+import kotlinx.android.synthetic.main.toolbar.*
 import kotlinx.coroutines.GlobalScope
 import kotlinx.coroutines.launch
 import maes.tech.intentanim.CustomIntent.customType
@@ -56,6 +58,8 @@ class ShowActivity : MvpAppCompatActivity(), ShowView {
         setContentView(R.layout.activity_show)
 
         db = AppDatabase(this)
+
+        toolbar_info.visibility = View.GONE
 
         toolbarBack = findViewById(R.id.toolbar_back)
         toolbarSave = findViewById(R.id.toolbar_save)
@@ -140,8 +144,9 @@ class ShowActivity : MvpAppCompatActivity(), ShowView {
 
         Picasso.get().load(itemArtWorkUrl).into(mImgArtWork)
 
-        mTxtPrice.text =
-            currentAudiobook.collectionPrice.toString() + ' ' + currentAudiobook.currency
+        currentAudiobook.collectionPrice.let {
+            mTxtPrice.text = it.toString() + ' ' + currentAudiobook.currency
+        }
 
         showPresenter.convertDate(currentAudiobook.releaseDate).let {
             mTxtReleaseDate.text = it
@@ -151,13 +156,15 @@ class ShowActivity : MvpAppCompatActivity(), ShowView {
             mTxtGenre.text = it
         }
 
-        showPresenter.convertHtmlToString(currentAudiobook.description).let {
-            mTxtDescription.text = it
+        currentAudiobook.description.let {
+            mTxtDescription.text = showPresenter.convertHtmlToString(it)
         }
     }
 
     override fun bindMovie(movieModel: MovieModel) {
         currentMovie = movieModel.results[0]
+
+        Log.d(TAG, "bind movie")
 
         GlobalScope.launch {
 

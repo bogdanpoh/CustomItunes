@@ -12,5 +12,9 @@ interface MainView : MvpView {
     fun showError(message: Int)
 
     fun setupEmptyList()
-    fun setupAnswersList(mainModel: MainModel)
+    fun setupList(mainModel: MainModel)
+    fun setupTabLayout()
+    fun showFavorite()
+    fun hideFovorite()
+    fun setSelectedBottomButton(id: Int)
 }

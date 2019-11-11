@@ -30,7 +30,7 @@ class MainPresenter : MvpPresenter<MainView>() {
             viewState.setupEmptyList()
             viewState.showError(message = R.string.empty_list)
         } else {
-            viewState.setupAnswersList(mainModel = mainModel)
+            viewState.setupList(mainModel = mainModel)
         }
     }
 }
